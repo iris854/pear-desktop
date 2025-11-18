@@ -13,8 +13,7 @@ const client = {
 
 export class YTMusic implements LyricProvider {
   public name = 'YTMusic';
-  public baseUrl =
-    'https://music.\u0079\u006f\u0075\u0074\u0075\u0062\u0065.com/';
+  public baseUrl = 'https://music.youtube.com/';
 
   // prettier-ignore
   public async search(

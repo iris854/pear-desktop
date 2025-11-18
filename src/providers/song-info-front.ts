@@ -326,7 +326,7 @@ export const setupSongInfo = (api: MusicPlayer) => {
         lengthSeconds: video.duration,
         loading: true,
 
-        ['\u0079\u0074\u006d\u0064WatchNextResponse']: watchNextResponse,
+        ytmdWatchNextResponse: watchNextResponse,
       } satisfies VideoDataChangeValue);
     }
   }
@@ -336,15 +336,14 @@ export const setupSongInfo = (api: MusicPlayer) => {
 
     let playerOverlay: PlayerOverlays | undefined;
 
-    if (!videoData['\u0079\u0074\u006d\u0064WatchNextResponse']) {
+    if (!videoData.ytmdWatchNextResponse) {
       playerOverlay = (
         Object.entries(videoData).find(
           ([, value]) => value && Object.hasOwn(value, 'playerOverlays'),
         ) as [string, AlbumDetails | undefined]
       )?.[1]?.playerOverlays;
     } else {
-      playerOverlay =
-        videoData['\u0079\u0074\u006d\u0064WatchNextResponse']?.playerOverlays;
+      playerOverlay = videoData.ytmdWatchNextResponse?.playerOverlays;
     }
     data.videoDetails.album =
       playerOverlay?.playerOverlayRenderer?.browserMediaSession?.browserMediaSessionRenderer?.album?.runs?.at(

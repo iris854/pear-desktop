@@ -503,14 +503,11 @@ async function createMainWindow() {
     const url = new URL(event.url);
 
     // Workarounds for regions where YTM is restricted
-    if (
-      url.hostname.endsWith('\u0079\u006f\u0075\u0074\u0075\u0062\u0065.com') &&
-      url.pathname === '/premium'
-    ) {
+    if (url.hostname.endsWith('youtube.com') && url.pathname === '/premium') {
       event.preventDefault();
 
       win.webContents.loadURL(
-        'https://accounts.google.com/ServiceLogin?ltmpl=music&service=\u0079\u006f\u0075\u0074\u0075\u0062\u0065&continue=https%3A%2F%2Fwww.\u0079\u006f\u0075\u0074\u0075\u0062\u0065.com%2Fsignin%3Faction_handle_signin%3Dtrue%26next%3Dhttps%253A%252F%252Fmusic.\u0079\u006f\u0075\u0074\u0075\u0062\u0065.com%252F',
+        'https://accounts.google.com/ServiceLogin?ltmpl=music&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26next%3Dhttps%253A%252F%252Fmusic.youtube.com%252F',
       );
     }
   });
@@ -946,7 +943,7 @@ function removeContentSecurityPolicy(
         !details.responseHeaders['access-control-allow-origin'] &&
         !details.responseHeaders['Access-Control-Allow-Origin']
       ) {
-        details.responseHeaders['access-control-allow-origin'] = ['https://music.\u0079\u006f\u0075\u0074\u0075\u0062\u0065.com'];
+        details.responseHeaders['access-control-allow-origin'] = ['https://music.youtube.com'];
       }
     }
 
