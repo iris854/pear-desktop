@@ -1,6 +1,5 @@
 import { t } from '@/i18n';
 import { createPlugin } from '@/utils';
-import { Platform } from '@/types/plugins';
 
 import { MaterialType, type TransparentPlayerConfig } from './types';
 
@@ -22,7 +21,6 @@ export default createPlugin({
   description: () => t('plugins.transparent-player.description'),
   addedVersion: '3.11.x',
   restartNeeded: true,
-  platform: Platform.Windows,
   config: defaultConfig,
   stylesheets: [style],
   async menu({ getConfig, setConfig }) {
