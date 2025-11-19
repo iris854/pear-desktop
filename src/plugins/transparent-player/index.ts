@@ -1,20 +1,59 @@
+import is from 'electron-is';
+
 import { t } from '@/i18n';
 import { createPlugin } from '@/utils';
-
 import { MaterialType, type TransparentPlayerConfig } from './types';
-
 import style from './style.css?inline';
 
 import type { BrowserWindow } from 'electron';
 
+// A helper function to apply window materials
+const setWindowMaterial = (window: BrowserWindow, type: MaterialType) => {
+  if (type === MaterialType.NONE) {
+    if (is.windows()) window.setBackgroundMaterial?.('none');
+    else if (is.macOS()) window.setVibrancy?.(null);
+    return;
+  }
+
+  if (is.windows()) {
+    window.setBackgroundMaterial?.(
+      type as Parameters<BrowserWindow['setBackgroundMaterial']>[0],
+    );
+  } else if (is.macOS()) {
+    window.setVibrancy?.(type as Parameters<BrowserWindow['setVibrancy']>[0]);
+  }
+};
+
+// Default values
 const defaultConfig: TransparentPlayerConfig = {
   enabled: false,
   opacity: 0.5,
-  type: MaterialType.ACRYLIC,
+  type: is.windows()
+    ? MaterialType.ACRYLIC
+    : is.macOS()
+      ? MaterialType.FULLSCREEN_UI
+      : MaterialType.NONE,
 };
 
+// List of available values
 const opacityList = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
-const typeList = Object.values(MaterialType);
+const typeList = is.windows()
+  ? [
+      MaterialType.MICA,
+      MaterialType.ACRYLIC,
+      MaterialType.TABBED,
+      MaterialType.NONE,
+    ]
+  : is.macOS()
+    ? [
+        MaterialType.WINDOW,
+        MaterialType.FULLSCREEN_UI,
+        MaterialType.CONTENT,
+        MaterialType.UNDER_WINDOW,
+        MaterialType.UNDER_PAGE,
+        MaterialType.NONE,
+      ]
+    : [MaterialType.NONE];
 
 export default createPlugin({
   name: () => t('plugins.transparent-player.name'),
@@ -58,14 +97,16 @@ export default createPlugin({
       this.mainWindow = window;
 
       const config = await getConfig();
-      window.setBackgroundMaterial?.(config.type);
+      setWindowMaterial(window, config.type);
       window.setBackgroundColor?.(`rgba(0, 0, 0, ${config.opacity})`);
     },
     onConfigChange(newConfig) {
-      this.mainWindow?.setBackgroundMaterial?.(newConfig.type);
+      if (this.mainWindow) {
+        setWindowMaterial(this.mainWindow, newConfig.type);
+      }
     },
     stop({ window }) {
-      window.setBackgroundMaterial?.('none');
+      setWindowMaterial(window, MaterialType.NONE);
     },
   },
   renderer: {
