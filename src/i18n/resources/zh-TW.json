@@ -455,14 +455,13 @@
         "connected": "已連線",
         "disconnected": "已斷開連線",
         "hide-duration-left": "隱藏音樂剩餘時間狀態",
-        "hide-github-button": "隱藏 GitHub 頁面按鈕",
-        "play-on-pear-desktop": "顯示 Play on Pear Desktop 按鈕",
+        "play-on-youtube-music": "顯示 Play on YouTube Music 按鈕",
         "set-inactivity-timeout": "設定閒置狀態時長",
         "set-status-display-type": {
           "label": "狀態樣式",
           "submenu": {
             "artist": "正在聆聽 {artist} 的歌曲",
-            "pear-desktop": "正在聆聽 Pear Desktop",
+            "application": "正在聆聽 {application}",
             "title": "正在聆聽 {song title}"
           }
         }

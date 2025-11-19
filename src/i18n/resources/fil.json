@@ -445,14 +445,13 @@
         "connected": "Nakakonekta",
         "disconnected": "Nadiskonekta",
         "hide-duration-left": "Itago ang natitirang oras",
-        "hide-github-button": "Itago ang button na GitHub link",
-        "play-on-pear-desktop": "Patugtugin sa Pear Desktop",
+        "play-on-youtube-music": "Patugtugin sa YouTube Music",
         "set-inactivity-timeout": "I-set ang inactivity timeout",
         "set-status-display-type": {
           "submenu": {
             "artist": "Nakikinig sa {artist}",
             "title": "Nakikinig sa {song title}",
-            "pear-desktop": "Kumikinig sa Pear Desktop"
+            "application": "Kumikinig sa {application}"
           }
         }
       },

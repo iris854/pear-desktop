@@ -455,15 +455,14 @@
         "connected": "Ansluten",
         "disconnected": "Frånkopplad",
         "hide-duration-left": "Dölj återstående tid",
-        "hide-github-button": "Dölj knapp för GitHub-länk",
-        "play-on-pear-desktop": "Spela på Pear Desktop",
+        "play-on-youtube-music": "Spela på YouTube Music",
         "set-inactivity-timeout": "Ställ in inaktivitetstid",
         "set-status-display-type": {
           "label": "Statusmeddelande",
           "submenu": {
             "artist": "Lyssnar på {artist}",
             "title": "Lyssnar på {song title}",
-            "pear-desktop": "Lyssnar på Pear Desktop"
+            "application": "Lyssnar på {application}"
           }
         }
       },

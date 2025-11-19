@@ -455,15 +455,14 @@
         "connected": "已连接",
         "disconnected": "已断开连接",
         "hide-duration-left": "隐藏剩余时长",
-        "hide-github-button": "隐藏 GitHub 链接按钮",
-        "play-on-pear-desktop": "转至 Pear Desktop 播放",
+        "play-on-youtube-music": "转至 YouTube Music 播放",
         "set-inactivity-timeout": "设置非活跃时长",
         "set-status-display-type": {
           "label": "状态文本",
           "submenu": {
             "artist": "在听 {artist}",
             "title": "在听 {song title}",
-            "pear-desktop": "在听 Pear Desktop"
+            "application": "在听 {application}"
           }
         }
       },

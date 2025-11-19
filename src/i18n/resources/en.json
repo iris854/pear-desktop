@@ -455,13 +455,12 @@
         "connected": "Connected",
         "disconnected": "Disconnected",
         "hide-duration-left": "Hide duration left",
-        "hide-github-button": "Hide GitHub link Button",
-        "play-on-pear-desktop": "Play on Pear Desktop",
+        "play-on-youtube-music": "Play on YouTube Music",
         "set-inactivity-timeout": "Set inactivity timeout",
         "set-status-display-type": {
           "label": "Status text",
           "submenu": {
-            "pear-desktop": "Listening to Pear Desktop",
+            "application": "Listening to {application}",
             "artist": "Listening to {artist}",
             "title": "Listening to {song title}"
           }

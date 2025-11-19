@@ -442,8 +442,7 @@
         "connected": "Yhdistetty",
         "disconnected": "Yhteys katkaistu",
         "hide-duration-left": "Piilota kappaleen jäljellä oleva kesto",
-        "hide-github-button": "Piilota \"linkki GitHubiin\" -nappi",
-        "play-on-pear-desktop": "Kuuntele palvelussa Pear Desktop",
+        "play-on-youtube-music": "Kuuntele palvelussa YouTube Music",
         "set-inactivity-timeout": "Aseta toimettomuuden aikakatkaisu"
       },
       "name": "Discord Aktiviteetti (Rich Presence)",

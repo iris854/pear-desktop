@@ -325,8 +325,7 @@
         "connected": "Tilkoblet",
         "disconnected": "Frakoblet",
         "hide-duration-left": "Skjul gjenværende tid",
-        "hide-github-button": "Skjul GitHub-lenkeknapp",
-        "play-on-pear-desktop": "Spill på Pear Desktop",
+        "play-on-youtube-music": "Spill på YouTube Music",
         "set-inactivity-timeout": "Sett tid før tidsavbrudd"
       },
       "name": "Rik tilstedeværelse for Discord",

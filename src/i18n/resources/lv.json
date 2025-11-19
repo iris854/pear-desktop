@@ -455,8 +455,7 @@
         "connected": "Pievienojies",
         "disconnected": "Atvienojies",
         "hide-duration-left": "Paslēpt cik palika laika",
-        "hide-github-button": "Paslēpt GitHub saites pogu",
-        "play-on-pear-desktop": "Atskaņot uz Pear Desktop",
+        "play-on-youtube-music": "Atskaņot uz YouTube Music",
         "set-inactivity-timeout": "Iestatīt neaktivitātes taimeru",
         "set-status-display-type": {
           "label": "Statusa teksts",

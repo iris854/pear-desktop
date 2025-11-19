@@ -455,14 +455,13 @@
         "connected": "Pripojené",
         "disconnected": "Odpojené",
         "hide-duration-left": "Skryť zostávajúcu dobu trvania",
-        "hide-github-button": "Skryť tlačidlo s odkazom na GitHub",
-        "play-on-pear-desktop": "Spustiť na Pear Desktop",
+        "play-on-youtube-music": "Spustiť na YouTube Music",
         "set-inactivity-timeout": "Nastaviť časový limit nečinnosti",
         "set-status-display-type": {
           "label": "Text stavu",
           "submenu": {
             "artist": "Aktuálne si prehráva {artist}",
-            "pear-desktop": "Aktuálne prehráva Pear Desktop",
+            "application": "Aktuálne prehráva {application}",
             "title": "Aktuálne si prehráva {song title}"
           }
         }

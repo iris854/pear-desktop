@@ -455,8 +455,7 @@
         "connected": "اتصال برقرار شد",
         "disconnected": "اتصال قطع شد",
         "hide-duration-left": "مخفی کردن مدت زمان باقی‌مانده",
-        "hide-github-button": "مخفی کردن دکمه لینک گیت هاب",
-        "play-on-pear-desktop": "پخش در یوتیوب موزیک",
+        "play-on-youtube-music": "پخش در یوتیوب موزیک",
         "set-inactivity-timeout": "تنظیم زمان عدم فعالیت",
         "set-status-display-type": {
           "label": "متن وضعىت",

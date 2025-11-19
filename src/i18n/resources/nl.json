@@ -455,15 +455,14 @@
         "connected": "Verbonden",
         "disconnected": "Verbinding verbroken",
         "hide-duration-left": "Verberg resterende tijd",
-        "hide-github-button": "GitHub-knop verbergen",
-        "play-on-pear-desktop": "Afspelen op Pear Desktop",
+        "play-on-youtube-music": "Afspelen op YouTube Music",
         "set-inactivity-timeout": "Inactiviteitstime-out instellen",
         "set-status-display-type": {
           "label": "Status tekst",
           "submenu": {
             "artist": "Naar {artist} aan het luisteren",
             "title": "Naar {song title} aan het luisteren",
-            "pear-desktop": "Naar Pear Desktop aan het luisteren"
+            "application": "Naar {application} aan het luisteren"
           }
         }
       },

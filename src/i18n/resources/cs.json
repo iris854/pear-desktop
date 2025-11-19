@@ -455,14 +455,13 @@
         "connected": "Připojeno",
         "disconnected": "Odpojeno",
         "hide-duration-left": "Skrýt zbývající duration",
-        "hide-github-button": "Skrýt tlačítko s odkazem na GitHub",
-        "play-on-pear-desktop": "Hrát na Pear Desktop",
+        "play-on-youtube-music": "Hrát na YouTube Music",
         "set-inactivity-timeout": "Nastavit timeout pro neaktivitu",
         "set-status-display-type": {
           "label": "Text statusu",
           "submenu": {
             "artist": "Poslouchám: {artist}",
-            "pear-desktop": "Poslouchám Pear Desktop",
+            "application": "Poslouchám {application}",
             "title": "Poslouchám {song title}"
           }
         }

@@ -399,8 +399,7 @@
         "connected": "Povezan",
         "disconnected": "Prekinjena povezava",
         "hide-duration-left": "Skrij preostali čas",
-        "hide-github-button": "Skrij povezavo do GitHub-a",
-        "play-on-pear-desktop": "Predvajaj v Pear Desktop",
+        "play-on-youtube-music": "Predvajaj v YouTube Music",
         "set-inactivity-timeout": "Nastavite časovno omejitev neaktivnosti"
       },
       "name": "Discord bogata prisotnost (Rich Presence)",

@@ -455,15 +455,14 @@
         "connected": "เชื่อมต่อแล้ว",
         "disconnected": "ตัดการเชื่อมต่อ",
         "hide-duration-left": "ซ่อนระยะเวลาที่เหลือ",
-        "hide-github-button": "ซ่อนปุ่มลิงก์ GitHub",
-        "play-on-pear-desktop": "เล่นบน Pear Desktop",
+        "play-on-youtube-music": "เล่นบน YouTube Music",
         "set-inactivity-timeout": "ตั้งระยะเวลาไม่มีกิจกรรม",
         "set-status-display-type": {
           "label": "ข้อความสถานะ",
           "submenu": {
             "artist": "กำลังฟัง {ชื่อนักร้อง}",
             "title": "กำลังฟัง {ชื่อเพลง}",
-            "pear-desktop": "กำลังฟัง Pear Desktop"
+            "application": "กำลังฟัง {application}"
           }
         }
       },

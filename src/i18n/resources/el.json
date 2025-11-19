@@ -442,8 +442,7 @@
         "connected": "Συνδεδεμένο",
         "disconnected": "Αποσυνδεδεμένο",
         "hide-duration-left": "Απόκρυψη της διάρκειας που απομένει",
-        "hide-github-button": "Απόκρυψη κουμπιού συνδέσμου GitHub",
-        "play-on-pear-desktop": "Αναπαραγωγή στο Pear Desktop",
+        "play-on-youtube-music": "Αναπαραγωγή στο YouTube Music",
         "set-inactivity-timeout": "Ορισμός χρονικού ορίου αδράνειας"
       },
       "name": "Discord Πλούσια παρουσία",

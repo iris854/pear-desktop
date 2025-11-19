@@ -455,13 +455,12 @@
         "connected": "Під'єднано",
         "disconnected": "Від'єднано",
         "hide-duration-left": "Приховати тривалість, яка залишилася",
-        "hide-github-button": "Приховати посилання на GitHub",
-        "play-on-pear-desktop": "Слухати на Pear Desktop",
+        "play-on-youtube-music": "Слухати на YouTube Music",
         "set-inactivity-timeout": "Встановити тайм-аут бездіяльності",
         "set-status-display-type": {
           "label": "Статус",
           "submenu": {
-            "pear-desktop": "Відтворення з Pear Desktop"
+            "application": "Відтворення з {application}"
           }
         }
       },

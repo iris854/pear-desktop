@@ -455,15 +455,14 @@
         "connected": "Connectat",
         "disconnected": "Desconnectat",
         "hide-duration-left": "Amaga la durada restant",
-        "hide-github-button": "Amaga el botó de l'enllaç a GitHub",
-        "play-on-pear-desktop": "Reprodueix a Pear Desktop",
+        "play-on-youtube-music": "Reprodueix a YouTube Music",
         "set-inactivity-timeout": "Estableix temps d'espera d'inactivitat",
         "set-status-display-type": {
           "label": "Text d'estat",
           "submenu": {
             "artist": "Escoltant {artist}",
             "title": "Escoltant {song title}",
-            "pear-desktop": "Escoltant Pear Desktop"
+            "application": "Escoltant {application}"
           }
         }
       },

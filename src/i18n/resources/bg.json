@@ -455,15 +455,14 @@
         "connected": "Свързано",
         "disconnected": "Прекъснато",
         "hide-duration-left": "Скрий оставащото време",
-        "hide-github-button": "Скрий бутона за линк към GitHub",
-        "play-on-pear-desktop": "Възпроизведи в Pear Desktop",
+        "play-on-youtube-music": "Възпроизведи в YouTube Music",
         "set-inactivity-timeout": "Задай таймаут за неактивност",
         "set-status-display-type": {
           "label": "Статус текст",
           "submenu": {
             "artist": "Слушам {artist}",
             "title": "Слушам {song title}",
-            "pear-desktop": "Слушам Pear Desktop"
+            "application": "Слушам {application}"
           }
         }
       },

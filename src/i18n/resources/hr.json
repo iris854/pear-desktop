@@ -455,14 +455,13 @@
         "connected": "Spojen",
         "disconnected": "Odspojen",
         "hide-duration-left": "Sakrij preostalo vrijeme",
-        "hide-github-button": "Sakrij gumb sa GitHub poveznicom",
-        "play-on-pear-desktop": "Reproduciraj na Pear Desktopu",
+        "play-on-youtube-music": "Reproduciraj na YouTube Musicu",
         "set-inactivity-timeout": "Postavi vremensko ograničenje neaktivnosti (inactivity timeout)",
         "set-status-display-type": {
           "label": "Tekst statusa",
           "submenu": {
             "artist": "Slušate {glazbenika}",
-            "pear-desktop": "Slušate Pear Desktop",
+            "application": "Slušate {application}",
             "title": "Slušate {naslov pjesme}"
           }
         }

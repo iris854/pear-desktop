@@ -52,7 +52,6 @@ export const setupTimeChangedListener = singleton(() => {
 
 export const setupRepeatChangedListener = singleton(() => {
   const repeatObserver = new MutationObserver((mutations) => {
-    // provided by Pear Desktop
     window.ipcRenderer.send(
       'peard:repeat-changed',
       (
@@ -69,7 +68,6 @@ export const setupRepeatChangedListener = singleton(() => {
   });
 
   // Emit the initial value as well; as it's persistent between launches.
-  // provided by Pear Desktop
   window.ipcRenderer.send(
     'peard:repeat-changed',
     document

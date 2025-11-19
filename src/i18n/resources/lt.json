@@ -426,14 +426,13 @@
         "connected": "Prisijungta",
         "disconnected": "Atsijungta",
         "hide-duration-left": "Slėpti kiek liko laiko",
-        "hide-github-button": "Slėpti \"GitHub\" nuorodos mygtuką",
-        "play-on-pear-desktop": "Leisti ant \"Pear Desktop\"",
+        "play-on-youtube-music": "Leisti ant \"YouTube Music\"",
         "set-inactivity-timeout": "Nustatyti neveiklumo laiką",
         "set-status-display-type": {
           "submenu": {
             "artist": "Klausosi {artist]",
             "title": "Klausosi {song title}",
-            "pear-desktop": "Klausosi Pear Desktop"
+            "application": "Klausosi {application}"
           }
         }
       },

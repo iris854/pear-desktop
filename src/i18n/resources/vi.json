@@ -455,15 +455,14 @@
         "connected": "Đã kết nối",
         "disconnected": "Đã ngắt kết nối",
         "hide-duration-left": "Ẩn thời lượng còn lại",
-        "hide-github-button": "Ẩn nút liên kết GitHub",
-        "play-on-pear-desktop": "Phát trong Pear Desktop",
+        "play-on-youtube-music": "Phát trong YouTube Music",
         "set-inactivity-timeout": "Đặt thời gian chờ không hoạt động",
         "set-status-display-type": {
           "label": "Văn bản trạng thái",
           "submenu": {
             "artist": "Đang nghe nhạc của {artist}",
             "title": "Đang nghe nhạc {song title}",
-            "pear-desktop": "Đang nghe Pear Desktop"
+            "application": "Đang nghe {application}"
           }
         }
       },

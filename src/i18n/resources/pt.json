@@ -455,15 +455,14 @@
         "connected": "Conectado",
         "disconnected": "Desconectado",
         "hide-duration-left": "Ocultar tempo restante",
-        "hide-github-button": "Ocultar botão GitHub",
-        "play-on-pear-desktop": "Reproduzir em Pear Desktop",
+        "play-on-youtube-music": "Reproduzir em YouTube Music",
         "set-inactivity-timeout": "Definir tempo de inatividade",
         "set-status-display-type": {
           "label": "Texto de estado",
           "submenu": {
             "artist": "A ouvir {artist}",
             "title": "A ouvir {song title}",
-            "pear-desktop": "A reproduzir Pear Desktop"
+            "application": "A reproduzir {application}"
           }
         }
       },

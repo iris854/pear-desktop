@@ -455,14 +455,13 @@
         "connected": "متصل",
         "disconnected": "غير متصل",
         "hide-duration-left": "إخفاء المدة المتبقية",
-        "hide-github-button": "إخفاء زر رابط GitHub",
-        "play-on-pear-desktop": "شغل في Pear Desktop",
+        "play-on-youtube-music": "شغل في YouTube Music",
         "set-inactivity-timeout": "ضبط مهلة عدم النشاط",
         "set-status-display-type": {
           "label": "نص الحالة",
           "submenu": {
             "artist": "جار السمع ل{artist}",
-            "pear-desktop": "جار السمع لPear Desktop",
+            "application": "جار السمع ل{application}",
             "title": "جار السمع ل{song title}"
           }
         }

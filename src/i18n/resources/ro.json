@@ -455,15 +455,14 @@
         "connected": "Conectat",
         "disconnected": "Deconectat",
         "hide-duration-left": "Ascunde timpul rămas",
-        "hide-github-button": "Ascunde butonul cu link-ul GitHub",
-        "play-on-pear-desktop": "Redă pe Pear Desktop",
+        "play-on-youtube-music": "Redă pe YouTube Music",
         "set-inactivity-timeout": "Setează intervalul de inactivitate",
         "set-status-display-type": {
           "label": "Text stare",
           "submenu": {
             "artist": "Ascultând {artist}",
             "title": "Ascultând {song title}",
-            "pear-desktop": "Ascultând Pear Desktop"
+            "application": "Ascultând {application}"
           }
         }
       },

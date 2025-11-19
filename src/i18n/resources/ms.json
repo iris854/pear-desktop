@@ -455,14 +455,13 @@
         "connected": "Tersambung",
         "disconnected": "Tidak disambungkan",
         "hide-duration-left": "Sembunyikan tempoh yang tinggal",
-        "hide-github-button": "Sembunyikan Butang pautan GitHub",
-        "play-on-pear-desktop": "Main di Pear Desktop",
+        "play-on-youtube-music": "Main di YouTube Music",
         "set-inactivity-timeout": "Tetapkan tamat masa tidak aktif",
         "set-status-display-type": {
           "label": "Teks status",
           "submenu": {
             "artist": "Sedang mendengar {artist}",
-            "pear-desktop": "Mendengar Pear Desktop",
+            "application": "Mendengar {application}",
             "title": "Sedang mendengar {tajuk lagu}"
           }
         }

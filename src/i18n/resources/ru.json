@@ -455,14 +455,13 @@
         "connected": "Подключено",
         "disconnected": "Отключено",
         "hide-duration-left": "Скрыть сколько осталось времени",
-        "hide-github-button": "Скрыть ссылку на GitHub",
-        "play-on-pear-desktop": "Воспроизвести на Pear Desktop",
+        "play-on-youtube-music": "Воспроизвести на YouTube Music",
         "set-inactivity-timeout": "Поставить таймер неактивности",
         "set-status-display-type": {
           "label": "Текст статуса",
           "submenu": {
             "artist": "Слушает {исполнитель}",
-            "pear-desktop": "Слушает Pear Desktop",
+            "application": "Слушает {application}",
             "title": "Слушает {название трека}"
           }
         }

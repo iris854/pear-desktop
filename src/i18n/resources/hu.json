@@ -452,14 +452,13 @@
         "connected": "Kapcsolódva",
         "disconnected": "Nincs Kapcsolódva",
         "hide-duration-left": "Hátralévő idő elrejtése",
-        "hide-github-button": "GitHub url gombjának elrejtése",
-        "play-on-pear-desktop": "Lejátszás a Pear Desktop-on",
+        "play-on-youtube-music": "Lejátszás a YouTube Music-on",
         "set-inactivity-timeout": "Inaktivitási időkorlát beállítása",
         "set-status-display-type": {
           "label": "Tevékenység szöveg",
           "submenu": {
             "artist": "Hallgatja: {artist}",
-            "pear-desktop": "Hallgatja: Pear Desktop",
+            "application": "Hallgatja: {application}",
             "title": "Hallgatja: {song title}"
           }
         }
