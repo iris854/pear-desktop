@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import { sortSegments } from '../segments';
+import { sortSegments } from '@/plugins/sponsorblock/segments';
 
 test('Segment sorting', () => {
   expect(

@@ -128,12 +128,12 @@
     "vudio": "2.1.1",
     "x11": "2.3.0",
     "youtubei.js": "15.0.1",
-    "zod": "4.1.5"   
+    "zod": "4.1.5"
   },
   "devDependencies": {
     "@electron-toolkit/tsconfig": "1.0.1",
     "@eslint/js": "9.35.0",
-    "@playwright/test": "1.55.0",
+    "@playwright/test": "1.56.1",
     "@stylistic/eslint-plugin": "5.3.1",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/electron-localshortcut": "3.1.3",
@@ -157,7 +157,7 @@
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-solid": "0.14.5",
     "glob": "11.0.3",
-    "playwright": "1.55.0",
+    "playwright": "1.56.1",
     "ts-morph": "27.0.0",
     "typescript": "5.9.2",
     "typescript-eslint": "8.43.0",
