@@ -72,6 +72,7 @@
     "conf": "15.0.2",
     "custom-electron-prompt": "1.5.8",
     "deepmerge-ts": "7.1.5",
+    "default-import": "^2.0.8",
     "delay": "7.0.0",
     "electron-debug": "4.1.0",
     "electron-is": "3.0.0",
