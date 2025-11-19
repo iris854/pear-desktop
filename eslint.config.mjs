@@ -64,7 +64,7 @@ export default tsEslint.config(
         afterLineComment: false,
       }],
       'stylistic/max-len': 'off',
-      'stylistic/no-mixed-operators': 'warn', // prettier does not support no-mixed-operators
+      'stylistic/no-mixed-operators': 'off', // prettier does not support no-mixed-operators
       'stylistic/no-multi-spaces': ['error', { ignoreEOLComments: true }],
       'stylistic/no-tabs': 'error',
       'no-void': 'error',

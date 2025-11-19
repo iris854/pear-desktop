@@ -1,4 +1,3 @@
-/* eslint-disable stylistic/no-mixed-operators */
 import {
   createEffect,
   createMemo,
