@@ -1,5 +1,6 @@
 import path from 'node:path';
 import process from 'node:process';
+
 import { _electron as electron } from 'playwright';
 import { test, expect } from '@playwright/test';
 
