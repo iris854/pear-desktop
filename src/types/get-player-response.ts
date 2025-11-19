@@ -202,7 +202,7 @@ export interface LinkAlternate {
 export interface PageOwnerDetails {
   name: string;
   externalChannelId: string;
-  ['youtubeProfileUrl']: string;
+  youtubeProfileUrl: string;
 }
 
 export interface MicroformatDataRendererVideoDetails {
