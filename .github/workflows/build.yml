@@ -3,7 +3,13 @@ name: Build Pear Desktop
 on:
   push:
     branches: [master]
-  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Publish release"
+        required: false
+        type: boolean
+        default: false
 
 env:
   NODE_VERSION: "24.x"
@@ -27,17 +33,10 @@ jobs:
           run_install: false
 
       - name: Setup NodeJS
-        if: startsWith(matrix.os, 'macOS') != true
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "pnpm"
-
-      - name: Setup NodeJS for macOS
-        if: startsWith(matrix.os, 'macOS')
-        uses: actions/setup-node@v5
-        with:
-          node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -45,13 +44,7 @@ jobs:
       - name: Vite Build
         run: pnpm build
 
-      - name: Build and release on Mac
-        if: startsWith(matrix.os, 'macOS')
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm release:mac
-
-      - name: Build and release on Linux
+      - name: Install external dependencies on Linux
         if: startsWith(matrix.os, 'ubuntu')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,17 +56,11 @@ jobs:
           sudo flatpak install -y flathub org.freedesktop.Platform/x86_64/24.08
           sudo flatpak install -y flathub org.freedesktop.Sdk/x86_64/24.08
           sudo flatpak install -y flathub org.electronjs.Electron2.BaseApp/x86_64/24.08
-          pnpm release:linux
 
-      - name: Build and release on Windows
-        if: startsWith(matrix.os, 'windows')
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm release:win
-
-      - name: Test
-        uses: coactions/setup-xvfb@v1
-        env:
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+      - name: Build/release Electron app
+        uses: phil-chp/action-electron-builder@95b7832032619bea86d2f120eaca0c810864b66e
         with:
-          run: pnpm test:debug
+          skip_install: true
+          skip_build: true
+          github_token: ${{ secrets.github_token }}
+          release: ${{ startsWith(github.ref, 'refs/tags/v') || inputs.release == true }}

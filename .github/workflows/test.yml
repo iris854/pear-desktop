@@ -1,0 +1,43 @@
+name: Test Pear Desktop
+
+on: push
+
+env:
+  NODE_VERSION: "24.x"
+
+jobs:
+  build:
+    name: Build Pear Desktop
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Vite Build
+        run: pnpm build
+
+      - name: Test
+        uses: coactions/setup-xvfb@v1
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+        with:
+          run: pnpm test:debug
