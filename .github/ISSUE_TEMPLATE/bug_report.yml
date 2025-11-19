@@ -10,9 +10,7 @@ body:
     options:
       - label: I use the latest version of application.
         required: true
-      - label: I have searched the [issue tracker](https://github.com/pear-devs/pear-desktop/issues) for a bug report that matches the one I want to file, without success.
-        required: true
-      - label: I understand that **pear-devs/pear-desktop has NO affiliation with Google or YouTube**
+      - label: I have searched the issue tracker for a bug report that matches the one I want to file, without success.
         required: true
 - type: input
   attributes:
