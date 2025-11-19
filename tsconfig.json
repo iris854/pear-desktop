@@ -27,5 +27,6 @@
     "electron.vite.config.mts",
     "./src/**/*",
     "*.config.*js",
+    "./tests/**/*"
   ]
 }

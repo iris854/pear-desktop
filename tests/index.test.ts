@@ -26,7 +26,7 @@ test('Pear Desktop App - With default settings, app is launched and visible', as
     "form[action='https://consent.youtube.com/save']",
   );
   if (consentForm) {
-    await consentForm.click('button');
+    await consentForm.click({ 'button': 'left' });
   }
 
   // const title = await window.title();
