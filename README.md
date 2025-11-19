@@ -1,20 +1,13 @@
 <div align="center">
 
-# :pear: Pear Desktop
+# Iris' fork of :pear: Pear Desktop
 
-[![GitHub release](https://img.shields.io/github/release/pear-devs/pear-desktop.svg?style=for-the-badge)](https://github.com/pear-devs/pear-desktop/releases/)
-[![GitHub license](https://img.shields.io/github/license/pear-devs/pear-desktop.svg?style=for-the-badge)](https://github.com/pear-devs/pear-desktop/blob/master/license)
-[![eslint code style](https://img.shields.io/badge/code_style-eslint-5ed9c7.svg?style=for-the-badge)](https://github.com/pear-devs/pear-desktop/blob/master/eslint.config.mjs)
-[![Build status](https://img.shields.io/github/actions/workflow/status/pear-devs/pear-desktop/build.yml?branch=master&style=for-the-badge)](https://GitHub.com/pear-devs/pear-desktop/releases/)
-[![GitHub All Releases](https://img.shields.io/github/downloads/pear-devs/pear-desktop/total?style=for-the-badge)](https://GitHub.com/pear-devs/pear-desktop/releases/)
-<!--[![AUR](https://img.shields.io/aur/version/pear-desktop-bin?color=blueviolet&style=for-the-badge)](https://aur.archlinux.org/packages/pear-desktop-bin)-->
-[![Known Vulnerabilities](https://snyk.io/test/github/pear-devs/pear-desktop/badge.svg)](https://snyk.io/test/github/pear-devs/pear-desktop)
+[![GitHub Release](https://img.shields.io/github/release/its-iris/pear-desktop.svg?style=for-the-badge)](https://github.com/its-iris/pear-desktop/releases/)
+[![GitHub License](https://img.shields.io/github/license/its-iris/pear-desktop.svg?style=for-the-badge)](https://github.com/its-iris/pear-desktop/blob/master/license)
+[![Eslint Code Style](https://img.shields.io/badge/code_style-eslint-5ed9c7.svg?style=for-the-badge)](https://github.com/its-iris/pear-desktop/blob/master/eslint.config.mjs)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/its-iris/pear-desktop/build.yml?branch=master&style=for-the-badge)](https://gitHub.com/its-iris/pear-desktop/releases/)
 
 </div>
-
-<!--![Screenshot](web/screenshot.png "Screenshot")-->
-
-- Native look & feel extension
 
 > [!IMPORTANT]
 > ⚠️ Disclaimer
@@ -172,7 +165,7 @@ You can help with translation on [Hosted Weblate](https://bit.ly/48n5YF7).
 
 ## Download
 
-You can check out the [latest release](https://github.com/pear-devs/pear-desktop/releases/latest) to quickly find the
+You can check out the [latest release](https://github.com/its-iris/pear-desktop/releases/latest) to quickly find the
 latest version.
 
 ### Arch Linux
@@ -181,12 +174,6 @@ Install the [`pear-desktop`](https://aur.archlinux.org/packages/pear-desktop) pa
 this [wiki page](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages).
 
 ### macOS
-
-You can install the app using Homebrew (see the [cask definition](https://github.com/pear-devs/pear-desktop-homebrew)):
-
-```bash
-brew install pear-devs/pear-desktop
-```
 
 If you install the app manually and get an error "is damaged and can’t be opened." when launching the app, run the following in the Terminal:
 
@@ -217,7 +204,7 @@ winget install pear-devs.pear-desktop
 
 #### How to install without a network connection? (in Windows)
 
-- Download the `*.nsis.7z` file for _your device architecture_ in [release page](https://github.com/pear-devs/pear-desktop/releases/latest).
+- Download the `*.nsis.7z` file for _your device architecture_ in [release page](https://github.com/its-iris/pear-desktop/releases/latest).
   - `x64` for 64-bit Windows
   - `ia32` for 32-bit Windows
   - `arm64` for ARM64 Windows
@@ -234,7 +221,7 @@ Some predefined themes are available in https://github.com/kerichdev/themes-for-
 ## Dev
 
 ```bash
-git clone https://github.com/pear-devs/pear-desktop
+git clone https://github.com/its-iris/pear-desktop
 cd pear-desktop
 pnpm install --frozen-lockfile
 pnpm dev
@@ -388,7 +375,7 @@ Uses [Playwright](https://playwright.dev/) to test the app.
 
 ## License
 
-MIT © [pear-devs](https://github.com/pear-devs/pear-desktop)
+MIT © [pear-devs](https://github.com/its-iris/pear-desktop)
 
 ## FAQ
 
