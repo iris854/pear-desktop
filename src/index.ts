@@ -925,7 +925,16 @@ function removeContentSecurityPolicy(
   // Allows defining multiple "onHeadersReceived" listeners
   // by enhancing the session.
   // Some plugins (e.g. adblocker) also define a "onHeadersReceived" listener
-  enhanceWebRequest(betterSession);
+
+  // Workaround for CJS/ESM interop issue. See https://github.com/microsoft/TypeScript/issues/49189
+  // This is necessary since the module resolution setting was switched to "bundler" from "node"
+  (
+    (
+      enhanceWebRequest as {
+        default?: typeof enhanceWebRequest;
+      }
+    ).default || enhanceWebRequest
+  )(betterSession);
 
   // Custom listener to tweak the content security policy
   betterSession.webRequest.onHeadersReceived((details, callback) => {
