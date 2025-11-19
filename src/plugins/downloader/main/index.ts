@@ -1,9 +1,17 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { randomBytes } from 'node:crypto';
+import vm from 'node:vm';
 
 import { app, type BrowserWindow, dialog, ipcMain } from 'electron';
-import { Innertube, UniversalCache, Utils, YTNodes } from 'youtubei.js';
+import {
+  Innertube,
+  UniversalCache,
+  Utils,
+  YTNodes,
+  Platform,
+  type Types,
+} from 'youtubei.js';
 import is from 'electron-is';
 import filenamify from 'filenamify';
 import { Mutex } from 'async-mutex';
@@ -51,6 +59,25 @@ const ffmpeg = lazy(async () =>
   }),
 );
 const ffmpegMutex = new Mutex();
+
+Platform.shim.eval = (
+  data: Types.BuildScriptResult,
+  env: Record<string, Types.VMPrimative>,
+) => {
+  const properties = [];
+  if (env.n) {
+    properties.push(`n: exportedVars.nFunction("${env.n}")`);
+  }
+  if (env.sig) {
+    properties.push(`sig: exportedVars.sigFunction("${env.sig}")`);
+  }
+
+  const code = `${data.output}\nreturn { ${properties.join(', ')} }`;
+  return vm.runInNewContext(
+    `(() => { ${code} })()`,
+    Object.create(null) as vm.Context,
+  ) as Types.EvalResult;
+};
 
 let yt: Innertube;
 let win: BrowserWindow;
@@ -126,7 +153,6 @@ export const onMainLoad = async ({
 
   yt = await Innertube.create({
     cache: new UniversalCache(false),
-    player_id: '0004de42',
     cookie: await getCookieFromWindow(win),
     generate_session_locally: true,
     fetch: getNetFetchAsFetch(),
