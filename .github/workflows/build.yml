@@ -1,4 +1,4 @@
-name: Build Pear Desktop
+name: Build Application
 
 on:
   push:
@@ -16,7 +16,7 @@ env:
 
 jobs:
   build:
-    name: Build Pear Desktop
+    name: Build Application
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
