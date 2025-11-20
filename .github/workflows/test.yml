@@ -2,9 +2,6 @@ name: Test Application
 
 on: push
 
-env:
-  NODE_VERSION: "24.x"
-
 jobs:
   build:
     name: Test Application
@@ -26,7 +23,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: 24.x
           cache: "pnpm"
 
       - name: Install dependencies
