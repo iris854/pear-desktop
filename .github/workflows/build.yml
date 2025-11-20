@@ -64,3 +64,9 @@ jobs:
           skip_build: true
           github_token: ${{ secrets.github_token }}
           release: ${{ startsWith(github.ref, 'refs/tags/v') || inputs.release == true }}
+
+      - name: Upload pack folder
+        uses: actions/upload-artifact@v5
+        with:
+          name: pack-${{ matrix.os }}
+          path: pack/
