@@ -1,21 +1,20 @@
 //@ts-check
 
 import eslint from '@eslint/js';
-import prettier from 'eslint-plugin-prettier/recommended';
-import solid from 'eslint-plugin-solid/configs/recommended';
+import { defineConfig } from 'eslint/config';
+import solid from 'eslint-plugin-solid/configs/typescript';
 import stylistic from '@stylistic/eslint-plugin';
 import tsEslint from 'typescript-eslint';
 
 import * as importPlugin from 'eslint-plugin-import';
 
-export default tsEslint.config(
+export default defineConfig(
   eslint.configs.recommended,
   tsEslint.configs.eslintRecommended,
   ...tsEslint.configs.recommendedTypeChecked,
-  prettier,
-  solid,
   { ignores: ['dist', 'node_modules', '*.config.*js', '*.test.*js'] },
   {
+    ...solid,
     plugins: {
       stylistic,
       importPlugin
@@ -34,7 +33,6 @@ export default tsEslint.config(
       'stylistic/jsx-pascal-case': 'error',
       'stylistic/jsx-curly-spacing': ['error', { when: 'never', children: true }],
       'stylistic/jsx-sort-props': 'error',
-      'prettier/prettier': ['error', { singleQuote: true, semi: true, tabWidth: 2, trailingComma: 'all', quoteProps: 'preserve' }],
       '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-misused-promises': ['off', { checksVoidReturn: false }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
