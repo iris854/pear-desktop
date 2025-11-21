@@ -107,6 +107,7 @@ protocol.registerSchemesAsPrivileged([
 // https://github.com/electron/electron/issues/15947
 if (is.linux()) {
   app.commandLine.appendSwitch('enable-transparent-visuals');
+  app.commandLine.appendSwitch('enable-unsafe-swiftshader');
   app.disableHardwareAcceleration();
 }
 
