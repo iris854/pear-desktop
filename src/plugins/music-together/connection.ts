@@ -1,5 +1,4 @@
 import { type DataConnection, Peer, type PeerError } from 'peerjs';
-import delay from 'delay';
 
 import type { Permission, Profile, VideoData } from './types';
 
@@ -99,16 +98,14 @@ export class Connection {
       this.peer.disconnect();
       this.peer.destroy();
     });
-    this.peer.on('error', async (err) => {
+    this.peer.on('error', (err) => {
       if (err.type === 'network') {
-        // retrying after 10 seconds
-        await delay(10000);
-        try {
-          this.peer.reconnect();
-          return;
-        } catch {
-          //ignored
-        }
+        setTimeout(() => {
+          try {
+            this.peer.reconnect();
+          } catch { }
+        }, 10000);
+        return;
       }
 
       this.waitOpen.reject(err);

@@ -21,7 +21,6 @@ import enhanceWebRequest, {
 import is from 'electron-is';
 import unhandled from 'electron-unhandled';
 import { autoUpdater } from 'electron-updater';
-import electronDebug from 'electron-debug';
 import { parse } from 'node-html-parser';
 import { deepmerge } from 'deepmerge-ts';
 import { deepEqual } from 'fast-equals';
@@ -160,11 +159,6 @@ if (config.get('options.proxy')) {
   console.log(LoggerPrefix, `Using proxy: ${proxyToUse}`);
   app.commandLine.appendSwitch('proxy-server', proxyToUse);
 }
-
-// Adds debug features like hotkeys for triggering dev tools and reload
-electronDebug({
-  showDevTools: false, // Disable automatic devTools on new window
-});
 
 let icon = 'assets/icon.png';
 if (process.platform === 'win32') {
