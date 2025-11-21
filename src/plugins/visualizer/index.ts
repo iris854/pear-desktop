@@ -185,8 +185,9 @@ export default createPlugin({
 
           const resizeCanvas = () => {
             if (canvas) {
-              canvas.width = visualizerContainer.clientWidth;
-              canvas.height = visualizerContainer.clientHeight;
+              const rect = visualizerContainer.getBoundingClientRect();
+              canvas.width = Math.ceil(rect.width);
+              canvas.height = Math.ceil(rect.height);
             }
           };
 
