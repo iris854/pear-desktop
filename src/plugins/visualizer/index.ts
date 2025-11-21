@@ -185,9 +185,9 @@ export default createPlugin({
 
           const resizeCanvas = () => {
             if (canvas) {
-              const rect = visualizerContainer.getBoundingClientRect();
-              canvas.width = Math.ceil(rect.width);
-              canvas.height = Math.ceil(rect.height);
+              const { width, height } = window.getComputedStyle(visualizerContainer);
+              canvas.width = Math.ceil(parseFloat(width));
+              canvas.height = Math.ceil(parseFloat(height));
             }
           };
 
@@ -207,19 +207,14 @@ export default createPlugin({
             config,
           );
 
-          const resizeVisualizer = (width: number, height: number) => {
+          const resizeVisualizer = () => {
             resizeCanvas();
-            visualizer.resize(width, height);
+            visualizer.resize(canvas.width, canvas.height);
           };
 
-          resizeVisualizer(canvas.width, canvas.height);
-          const visualizerContainerObserver = new ResizeObserver((entries) => {
-            for (const entry of entries) {
-              resizeVisualizer(
-                entry.contentRect.width,
-                entry.contentRect.height,
-              );
-            }
+          resizeVisualizer();
+          const visualizerContainerObserver = new ResizeObserver(() => {
+            resizeVisualizer();
           });
           visualizerContainerObserver.observe(visualizerContainer);
 
