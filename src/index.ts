@@ -104,6 +104,12 @@ protocol.registerSchemesAsPrivileged([
   { scheme: 'mailto', privileges: { standard: true } },
 ]);
 
+// https://github.com/electron/electron/issues/15947
+if (is.linux()) {
+  app.commandLine.appendSwitch('enable-transparent-visuals');
+  app.disableHardwareAcceleration();
+}
+
 // Ozone platform hint: Required for Wayland support
 app.commandLine.appendSwitch('ozone-platform-hint', 'auto');
 // SharedArrayBuffer: Required for downloader (@ffmpeg/core-mt)
@@ -347,6 +353,7 @@ async function createMainWindow() {
     minHeight: 425,
     backgroundColor: '#000',
     show: false,
+    transparent: true,
     webPreferences: {
       contextIsolation: true,
       preload: path.join(__dirname, '..', 'preload', 'preload.cjs'),
