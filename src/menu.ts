@@ -128,7 +128,7 @@ export const mainMenuTemplate = async (
 
         return aPluginLabel.localeCompare(bPluginLabel);
       })
-      .map((id) => {
+      .map(async (id) => {
         const predefinedTemplate = menuResult.find((it) => it[0] === id);
         if (predefinedTemplate) return predefinedTemplate[1];
 
@@ -139,7 +139,7 @@ export const mainMenuTemplate = async (
           ? satisfies(packageJson.version, plugin.addedVersion)
           : false;
 
-        return pluginEnabledMenu(
+        return await pluginEnabledMenu(
           id,
           pluginLabel,
           pluginDescription,
