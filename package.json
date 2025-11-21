@@ -14,17 +14,17 @@
     "url": "https://github.com/pear-devs/pear-desktop"
   },
   "scripts": {
-    "test": "pnpm playwright test",
-    "test:debug": "pnpm cross-env DEBUG=pw:*,-pw:test:protocol playwright test",
-    "build": "pnpm electron-vite build",
-    "vite:inspect": "electron-vite build --mode development && pnpm exec serve .vite-inspect",
-    "start": "pnpm electron-vite preview",
-    "start:debug": "pnpm cross-env ELECTRON_ENABLE_LOGGING=1 pnpm start",
-    "dev": "pnpm cross-env NODE_ENV=development NODE_OPTIONS=--enable-source-maps electron-vite dev --watch",
-    "dev:renderer": "pnpm cross-env NODE_ENV=development NODE_OPTIONS=--enable-source-maps electron-vite dev",
-    "dev:debug": "pnpm cross-env ELECTRON_ENABLE_LOGGING=1 pnpm dev",
-    "lint": "pnpm eslint ./src",
-    "typecheck": "pnpm tsc -p tsconfig.json --noEmit"
+    "test": "playwright test",
+    "test:debug": "cross-env DEBUG=pw:*,-pw:test:protocol playwright test",
+    "build": "electron-vite build",
+    "vite:inspect": "electron-vite build --mode development && serve .vite-inspect",
+    "start": "electron-vite preview",
+    "start:debug": "cross-env ELECTRON_ENABLE_LOGGING=1 electron-vite preview",
+    "dev": "cross-env NODE_ENV=development NODE_OPTIONS=--enable-source-maps electron-vite dev --watch",
+    "dev:renderer": "cross-env NODE_ENV=development NODE_OPTIONS=--enable-source-maps electron-vite dev",
+    "dev:debug": "cross-env ELECTRON_ENABLE_LOGGING=1 pnpm dev",
+    "lint": "eslint ./src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "engines": {
     "node": ">=22",
