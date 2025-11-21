@@ -1,5 +1,4 @@
-import { type NativeImage, nativeImage, nativeTheme } from 'electron';
-import { Jimp, JimpMime } from 'jimp';
+import { type NativeImage, nativeImage } from 'electron';
 
 import playIcon from '@assets/media-icons-black/play.png?asset&asarUnpack';
 import pauseIcon from '@assets/media-icons-black/pause.png?asset&asarUnpack';
@@ -26,7 +25,7 @@ export default createPlugin({
     enabled: false,
   },
 
-  async backend({ window }) {
+  backend({ window }) {
     let currentSongInfo: SongInfo;
 
     const { playPause, next, previous } = getSongControls(window);
@@ -47,20 +46,11 @@ export default createPlugin({
       }
     };
 
-    const getNativeImage = async (
-      kind: keyof typeof mediaIcons,
-    ): Promise<NativeImage> => {
+    const getNativeImage = (kind: keyof typeof mediaIcons): NativeImage => {
       const imagePath = getImagePath(kind);
 
       if (imagePath) {
-        const jimpImageBuffer = await Jimp.read(imagePath).then((img) => {
-          if (imagePath && nativeTheme.shouldUseDarkColors) {
-            return img.invert().getBuffer(JimpMime.png);
-          }
-          return img.getBuffer(JimpMime.png);
-        });
-
-        return nativeImage.createFromBuffer(jimpImageBuffer);
+        return nativeImage.createFromPath(imagePath);
       }
 
       // return empty image
@@ -68,10 +58,10 @@ export default createPlugin({
     };
 
     const images = {
-      play: await getNativeImage('play'),
-      pause: await getNativeImage('pause'),
-      next: await getNativeImage('next'),
-      previous: await getNativeImage('previous'),
+      play: getNativeImage('play'),
+      pause: getNativeImage('pause'),
+      next: getNativeImage('next'),
+      previous: getNativeImage('previous'),
     };
 
     const setThumbar = (songInfo: SongInfo) => {
